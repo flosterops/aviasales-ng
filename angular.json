@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "aviasales-angular"
+    }
+  },
+  "defaultProject": "aviasales-angular",
+  "cli": {
+    "analytics": false
+  }
 }

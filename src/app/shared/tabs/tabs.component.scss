@@ -1,0 +1,33 @@
+.tabs {
+  &__container {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    :first-of-type {
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+    :last-of-type {
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+
+    }
+    border: 1px solid #CCC;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: cornflowerblue;
+    background: #FFF;
+    padding: 10px 15px;
+    &_active {
+      color: #FFF;
+      background: cornflowerblue;
+    }
+  }
+}
