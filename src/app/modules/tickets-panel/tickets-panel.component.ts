@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CardModel} from '../../models/cardModel';
 import {TicketFiltersService} from '../../services/ticket-filter-service/ticket-filters.service';
+import { TicketsServiceService } from '../../services/tickets-service/tickets-service.service';
 
 @Component({
   selector: 'app-tickets-panel',
@@ -8,13 +9,13 @@ import {TicketFiltersService} from '../../services/ticket-filter-service/ticket-
   styleUrls: ['./tickets-panel.component.scss']
 })
 export class TicketsPanelComponent implements OnInit {
-  public cards: Array<CardModel>;
+  public cards: Array<CardModel & { visible: boolean}>;
 
-  constructor(private ticketFiltersService: TicketFiltersService) {
+  constructor(private ticketsService: TicketsServiceService) {
   }
 
   ngOnInit(): void {
-     this.ticketFiltersService.filteredTickets.subscribe((res: Array<CardModel>) => {
+     this.ticketsService.tickets.subscribe((res: Array<CardModel & { visible: boolean}>) => {
        this.cards = res;
     });
   }
