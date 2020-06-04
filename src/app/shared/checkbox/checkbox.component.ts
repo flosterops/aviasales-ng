@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {CheckboxModel, FilterCheckboxModel} from '../../models/checkboxModel';
 
 @Component({
   selector: 'app-checkbox',
@@ -7,15 +8,15 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class CheckboxComponent implements OnInit {
 
-  @Input() value = false;
-  @Input() label = '';
-  @Output() onChange: EventEmitter<any>;
+  @Input() checkbox: FilterCheckboxModel;
+  @Output() onCheckboxChange: EventEmitter<any> = new EventEmitter();
 
-  constructor() {
+  constructor() {}
 
-  }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  emitCheckboxChange(id: string, isChecked: boolean, filterValue: number): void {
+    this.onCheckboxChange.emit({ id, isChecked: !isChecked, filterValue });
   }
 
 }

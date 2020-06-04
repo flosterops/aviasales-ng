@@ -1,9 +1,4 @@
 .checkbox {
-  z-index: 2;
-  content: '';
-  position: absolute;
-  display: inline-block;
-  vertical-align: middle;
   width: 19px;
   height: 19px;
   margin-right: 11px;
@@ -13,18 +8,9 @@
   -o-transition: .1s linear;
   transition: .1s linear;
   &__container {
-    width: 19px;
-    height: 19px;
-    z-index: -1;
-    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
-//
-//  &__mark {
-//    position: absolute;
-//    z-index: 3;
-//  }
 }
 

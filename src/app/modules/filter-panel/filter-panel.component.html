@@ -1,0 +1,9 @@
+<div class="filter">
+  <p class="filter__title">количество пересадок</p>
+  <div *ngFor="let checkbox of checkboxes">
+    <app-checkbox
+      (onCheckboxChange)="onFilterChange($event)"
+      [checkbox]="checkbox"
+    ></app-checkbox>
+  </div>
+</div>

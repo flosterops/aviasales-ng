@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card__left">
+    <p>{{ card.carrier }}</p>
+    <button>
+    Купить за {{ card.price }}
+    </button>
+  </div>
+  <div class="card__main">
+    <div class="card__time_container">
+      <div class="card__time">{{ card.departure_time }}</div>
+      <div>{{ transfersDictionary[card.stops] }}</div>
+      <div class="card__time">{{ card.arrival_time }}</div>
+    </div>
+    <div class="card__info">
+      <div>
+        <p>{{ card.origin }}, {{ card.origin_name }}</p>
+        <p>{{ card.departure_date }}</p>
+      </div>
+      <div class="card__info_right">
+        <p>{{ card.destination }}, {{ card.destination_name }}</p>
+        <p>{{ card.arrival_date }}</p>
+      </div>
+    </div>
+  </div>
+</div>

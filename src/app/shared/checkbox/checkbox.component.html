@@ -1,4 +1,12 @@
 <div class="checkbox__container">
-  <input type="checkbox" class="checkbox" [ngModel]="value" />
-<!--  <img src="../../statics/checkbox-active.svg" class="checkbox__mark">-->
+  <input
+    type="checkbox"
+    class="checkbox"
+    [checked]="checkbox.isChecked"
+    [alt]="checkbox.label"
+    [id]="checkbox.id"
+    (ngModelChange)="emitCheckboxChange(checkbox.id, checkbox.isChecked, checkbox.filterValue)"
+    [(ngModel)]="checkbox.isChecked"
+  />
+  <p *ngIf="checkbox.label">{{ checkbox.label }}</p>
 </div>
