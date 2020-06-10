@@ -1,0 +1,20 @@
+<div (click)="toggleBucketModal()" class="bucket-mini">
+    КОРЗИНА
+    <div *ngIf="isOpenModel" class="bucket-mini__modal">
+        <div *ngIf="false; else emptyBucket">
+            <div *ngFor="let ticket of bucketTickets" class="bucket-mini__modal_item">
+                <app-bucket-ticket-mini
+                    *ngIf="ticket.bucket"
+                    (remove)="removeTicketFromBucket(ticket.id)"
+                    [ticket]="ticket"
+                ></app-bucket-ticket-mini>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #emptyBucket>
+    <div class="bucket-mini__empty">
+        Корзина пуста
+    </div>
+</ng-template>

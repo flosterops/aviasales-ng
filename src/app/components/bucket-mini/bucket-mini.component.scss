@@ -1,0 +1,36 @@
+.bucket-mini {
+  width: 70px;
+  height: 40px;
+  border: 1px solid #ccc;
+  display: flex;
+  padding: 15px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  &__empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  &__modal {
+    position: absolute;
+    left: -320px;
+    bottom: -170px;
+    background: #fff;
+    width: 300px;
+    height: 200px;
+    overflow: scroll;
+    flex-direction: column;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    display: flex;
+    z-index: 4;
+    &_item {
+      width: 100%;
+    }
+  }
+}

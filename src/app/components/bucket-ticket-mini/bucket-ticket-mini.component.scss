@@ -1,0 +1,35 @@
+.ticket-mini {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    ::ng-deep {
+        p {
+            margin: 0;
+            white-space: nowrap;
+        }
+    }
+    &__separator {
+        border: 1px dashed #cccccc;
+        width: 100%;
+    }
+    &__date {
+        font-size: 12px;
+        color: #ccc;
+        margin: 10px 0;
+    }
+    &__remove {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    &__arrival {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    &__destination {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        align-items: flex-end;
+    }
+}

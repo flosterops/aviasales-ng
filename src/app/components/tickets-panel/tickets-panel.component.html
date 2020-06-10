@@ -1,0 +1,10 @@
+<div *ngIf="cards">
+    <div *ngFor="let card of cards">
+        <app-ticket-card
+            (click)="navigateToTicket(card.id)"
+            *ngIf="card.visible"
+            (buyTicket)="onBuyTicket($event)"
+            [card]="card"
+        ></app-ticket-card>
+    </div>
+</div>

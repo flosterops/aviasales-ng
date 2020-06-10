@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card__left">
     <p>{{ card.carrier }}</p>
-    <button>
+    <button (click)="onBuyTicket(card.id)">
     Купить за {{ card.price }}
     </button>
   </div>

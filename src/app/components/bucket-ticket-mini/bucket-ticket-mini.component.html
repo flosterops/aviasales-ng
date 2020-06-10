@@ -1,0 +1,14 @@
+<div class="ticket-mini">
+    <div class="ticket-mini__arrival">
+        <p>{{ ticket.origin_name }}</p>
+        <p class="ticket-mini__date">{{ ticket.arrival_date }}</p>
+    </div>
+    <div class="ticket-mini__separator"></div>
+    <div class="ticket-mini__destination">
+        <p>{{ ticket.destination_name }}</p>
+        <p class="ticket-mini__date">{{ ticket.departure_date }}</p>
+    </div>
+    <div (click)="onRemoveClick(ticket.id)" class="ticket-mini__remove">
+        x
+    </div>
+</div>
