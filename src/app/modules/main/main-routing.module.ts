@@ -6,7 +6,7 @@ import { PriceFilterServiceService } from '../../services/price-filter-service/p
 
 const routes: Routes = [
     {
-        path: 'main',
+        path: '',
         component: MainComponent,
     },
 ];

@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainRoutingModule } from './modules/main/main-routing.module';
-import { BucketRoutingModule } from './modules/bucket/bucket-routing.module';
 
 const routes: Routes = [
     {
         path: '',
-        redirectTo: '/main',
+        redirectTo: '/auth',
         pathMatch: 'full',
     },
     {
@@ -17,10 +15,14 @@ const routes: Routes = [
         path: 'bucket',
         loadChildren: () => import('./modules/bucket/bucket.module').then((m) => m.BucketModule),
     },
+    {
+        path: 'auth',
+        loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
+    },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes), MainRoutingModule, BucketRoutingModule],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
 })
 export class AppRoutingModule {}

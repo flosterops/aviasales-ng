@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BucketComponent } from '../../pages/bucket/bucket.component';
+import { AuthComponent } from '../../pages/auth/auth.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: BucketComponent,
+        component: AuthComponent,
     },
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
 })
-export class BucketRoutingModule {}
+export class AuthRoutingModule {}

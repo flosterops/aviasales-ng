@@ -1,0 +1,21 @@
+<form [formGroup]="authForm" (ngSubmit)="onSubmitClick()" class="auth__form">
+    <label class="auth__form__control">
+        login:
+        <input class="auth__form_input" type="text" formControlName="login" />
+    </label>
+    <label class="auth__form__control">
+        email:
+        <input class="auth__form_input" type="text" formControlName="email" />
+    </label>
+    <label class="auth__form__control">
+        password:
+        <input class="auth__form_input" type="text" formControlName="password" />
+    </label>
+    <label class="auth__form__control">
+        passCheck:
+        <input class="auth__form_input" type="text" formControlName="passCheck" />
+    </label>
+    <div class="auth__form__control auth__form_submit">
+        <button type="submit" [disabled]="!authForm.valid">Auth</button>
+    </div>
+</form>
